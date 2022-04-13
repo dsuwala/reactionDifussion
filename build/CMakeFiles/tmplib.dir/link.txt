@@ -1,1 +1,0 @@
-/usr/bin/g++ -fPIC -O3 -funroll-loops -ffast-math -DNDEBUG -std=c++14 -fvisibility=hidden -fpermissive -shared -Wl,-soname,libtmplib.so -o libtmplib.so CMakeFiles/tmplib.dir/src/DiffusionAdvectionSolver.cpp.o CMakeFiles/tmplib.dir/src/GrayScottSolver.cpp.o CMakeFiles/tmplib.dir/src/Point2D.cpp.o CMakeFiles/tmplib.dir/src/RandomClass.cpp.o 
