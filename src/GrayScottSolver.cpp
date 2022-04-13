@@ -53,11 +53,6 @@ void GrayScottSolver::solve(const int max_steps){
     double laplacian_u = 0.0, laplacian_v = 0.0, uvv = 0.0;
 
 
-    // int x = std::floor(_nx/2 - 16);
-    // int y = std::floor(_ny/2 - 16);
-    int ii = 28;
-    int jj = 28;
-
     for (int n=0; n < max_steps; n++){
 
         uprev = this->_u;
@@ -96,7 +91,7 @@ void GrayScottSolver::dumpCSV(const int step){
 }
 
 double GrayScottSolver::calculateLaplacian(int i, int j, const std::vector<std::vector <double>> &field){
-    // calculate laplacian of a given field at point i, j with 3-point DF discretization 
+    // calculate 5-point discretized FD laplacian at point (i,j) of a given field
     
     double laplacian = (field.at(i).at(j + 1) - 2 * field.at(i).at(j) + field.at(i).at(j - 1))/(_dx * _dx)  + 
                          (field.at(i + 1).at(j) - 2 * field.at(i).at(j) + field.at(i - 1).at(j))/(_dy * _dy);
