@@ -41,6 +41,4 @@ for i in range( int((par["nx"] / 2) - r), int((par["nx"] / 2) + r)):
 for snap in range(0, 100):
     solver.solver(2000)
     plt.imshow(np.array(solver.u), cmap='viridis', vmin=0.0, vmax=1.0, interpolation='bilinear')
-    plt.savefig("gc(u)_F={}_k={}_t={}.png".format(par["F"], par["k"], snap), dpi=300)
-
-# solver.solver(20000)
+    plt.savefig(f"examples/png/{snap}.png".format(par["F"], par["k"], snap), dpi=300)

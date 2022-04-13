@@ -36,3 +36,4 @@ conc.csv.*
 *.png
 rename.sh
 build/
+examples/png/
