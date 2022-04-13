@@ -35,4 +35,4 @@
 conc.csv.*
 *.png
 rename.sh
-./build/
+build/
