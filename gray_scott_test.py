@@ -6,7 +6,9 @@ import matplotlib.pyplot as plt
 random = RandomClass(1231231)
 
 # par = {"nx": 75, "ny" : 75, "dx": 0.01, "dy": 0.01, "dt":0.1 * 0.01**2/1e-3, "Du": 1e-5, "Dv": 5e-6, "F": 0.029, "k" :0.057} # mazes
-par = {"nx": 75, "ny" : 75, "dx": 0.01, "dy": 0.01, "dt":0.1 * 0.01**2/1e-3, "Du": 1e-5, "Dv": 5e-6, "F": 0.030, "k" :0.062} # dividing dots
+#par = {"nx": 75, "ny" : 75, "dx": 0.01, "dy": 0.01, "dt":0.1 * 0.01**2/1e-3, "Du": 1e-5, "Dv": 5e-6, "F": 0.030, "k" :0.062} # dividing dots
+#par = {"nx": 75, "ny" : 75, "dx": 0.01, "dy": 0.01, "dt":0.1 * 0.01**2/1e-3, "Du": 1e-5, "Dv": 5e-6, "F": 0.030, "k" :0.062} # rose of dots
+par = {"nx": 75, "ny" : 75, "dx": 0.01, "dy": 0.01, "dt":0.1 * 0.01**2/1e-3, "Du": 1e-5, "Dv": 5e-6, "F": 0.018, "k" :0.05} # chaos
 # par = {"nx": 3, "ny" : 3, "dx": 0.01, "dy": 0.01, "dt":0.1 * 0.01**2/1e-3, "Du": 1e-5, "Dv": 5e-6, "F": 0.029, "k" :0.057}
 # par = {"nx": 75, "ny" : 75, "dx": 1.0, "dy": 1.0, "dt": 0.1 * 0.01**2/1e-3, "Du": 0.16, "Dv": 0.08, "F": 0.035, "k" :0.060}
 
@@ -36,8 +38,8 @@ for i in range(0, par["nx"]):
 
 for i in range( int((par["nx"] / 2) - r), int((par["nx"] / 2) + r)):
     for j in range( int((par["ny"] / 2) - r), int((par["ny"] / 2) + r)):
-        solver.setu(i, j, random.randn(0.5, 5e-2))
-        solver.setv(i, j, random.randn(0.25, 5e-2))
+        solver.setu(i, j, random.randn(0.8, 5e-2))
+        solver.setv(i, j, random.randn(0.4, 5e-2))
 
 for snap in range(0, 100):
     solver.solver(2000)
